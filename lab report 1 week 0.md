@@ -1,3 +1,1 @@
-![Image][1]
-⋮
-[1]: makima.jpg
+![Image] (makima.jpg)

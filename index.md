@@ -1,1 +1,1 @@
-Welcome to the index, traveler. Enjoy your, stay.
+**Welcome to the index,** *traveler*. Enjoy your, stay.

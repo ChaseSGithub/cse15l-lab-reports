@@ -1,1 +1,0 @@
-![Image](makima.jpg)

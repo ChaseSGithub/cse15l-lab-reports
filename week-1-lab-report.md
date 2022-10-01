@@ -34,4 +34,14 @@ Now, we are going to attempt to try a few commands. There is a list of commands 
 -cat /home/linux/ieng6/cs15lfa22/public/hello.txt  
     
  The command that I chose to use is **ls -lat** which producing a result like this, listing files in the directory laterally  
-  ![First Command](firstCommand.png)
+  ![First Command](firstCommand.png)  
+    
+  **Step 4**  
+  Unfortunately, here is where I happened to run into some problems.  
+  I had quite a bit of trouble when it came to logging in to the remote server but I was able to get it to work **a single time**  
+  Following the instructions post **Step 3** however, prompts you to logout so that you may run commands from the client.  
+  I was unable to login another time and have still been unable to do so even from my home computer, so I will try my best to describe the process without screenshots!  
+    
+  For this next step, you will be using the **scp** command in order to copy files from the client to the server.
+  The first step in this process is creating a file on **VS Code** named **WhereAmI.java**  
+  

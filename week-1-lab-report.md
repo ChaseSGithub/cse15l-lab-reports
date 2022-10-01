@@ -19,5 +19,5 @@ To login to the remote server, type the following command into the terminal
     
 replacing the **"zz"** with the two letters in your given username.  
 After doing so, you should be prompted with terminal messages that look similar to this:  
-[Terminal Post Login](TerminalLogin.png)
+![Terminal Post Login](TerminalLogin.png)
 

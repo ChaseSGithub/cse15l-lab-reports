@@ -54,5 +54,38 @@ Now, we are going to attempt to try a few commands. There is a list of commands 
       System.out.println(System.getProperty("user.home"));  
       System.out.println(System.getProperty("user.dir"));  
     }  
-  }
+  }  
+    
+  Once doing this and **saving the file**, you should be able to input the following command into the terminal:  
+  scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:~/  
+  Once again, replacing the "zz" with the two letters in your actual username  
+    
+  Once logging back onto the remote server, you should find this file by using **ls** to list the files in the home directory!  
+    
+  **Step 5**  
+  For step 5, we are going to set up an **SSH Key** in order to bypass that repetitive task of failing to input your password!  
+  The first step in this process is to run the following command on your client, that being:  
+  $ **ssh-keygen**  
+  Once running this command, you will be show information regarding the key that is being generated. This process then creates two files on your system, **id_rsa** and **id_rsa.pub**, being the private key and public key respectively.  
+    
+  Next, on your client, login just as you have before using the ssh command followed my your username@ieng6.ucsd.edu and then type in your password as you are prompted  
+  Once on the server, enter the following commands:  
+  **mkdir .ssh**  
+  **<logout>**  
+  Which should then return you to the client, where finally you can run  
+  **scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys**  
+  Once again, using your username and the above path  
+    
+  *Step 6**
+  For this last step, there are just a few tips and tricks when it comes to running commands on a remote server  
+  For one, you can follow your ssh login command with a command in parentheses in order to run that command upon login  
+  For example:  
+  **ssh cs15lfa22@ieng6.ucsd.edu ""ls -lat""**  
+  will run the ""ls -lat"" command upon login, producing the results shown in the screenshot from **Step 3**  
+  Another tip is the fact that you can input semicolons between commands in order to run multiple commands consectuively!  
+  Such as in:  
+  **cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI**  
+    
+  With this, you'll be on your way to becoming a remote server **Superstar!**
+  
   

@@ -19,5 +19,19 @@ To login to the remote server, type the following command into the terminal
     
 replacing the **"zz"** with the two letters in your given username.  
 After doing so, you should be prompted with terminal messages that look similar to this:  
-![Terminal Post Login](TerminalLogin.png)
-
+![Terminal Post Login](TerminalLogin.png)  
+  
+This will be the indication that you have successfully logged in to the remote server.  
+  
+**Step 3**  
+Now, we are going to attempt to try a few commands. There is a list of commands that you can try including:  
+-cd ~  
+-cd  
+-ls -lat  
+-ls -a  
+-ls <directory> (with the directory being **/home/linux/ieng6/cs15lfa22/cs15lfa22abc** where "abc" is one of the other group member's username  
+-cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/  
+-cat /home/linux/ieng6/cs15lfa22/public/hello.txt  
+    
+ The command that I chose to use is **ls -lat** which producing a result like this, listing files in the directory laterally  
+  ![First Command](firstCommand.png)

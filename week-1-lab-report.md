@@ -42,6 +42,17 @@ Now, we are going to attempt to try a few commands. There is a list of commands 
   Following the instructions post **Step 3** however, prompts you to logout so that you may run commands from the client.  
   I was unable to login another time and have still been unable to do so even from my home computer, so I will try my best to describe the process without screenshots!  
     
-  For this next step, you will be using the **scp** command in order to copy files from the client to the server.
+  For this next step, you will be using the **scp** command in order to copy files from the client to the server.  
   The first step in this process is creating a file on **VS Code** named **WhereAmI.java**  
+  In the file we will be creating a class called **WhereAmI"" and input the following information in it to properly print the information we need.  
+  It should look something like this:  
+    
+  class WhereAmI {  
+    public static void main(String[] args) {  
+      System.out.println(System.getProperty("os.name"));  
+      System.out.println(System.getProperty("user.name"));  
+      System.out.println(System.getProperty("user.home"));  
+      System.out.println(System.getProperty("user.dir"));  
+    }  
+  }
   

@@ -65,7 +65,7 @@ class searchHandler implements URLHandler {
     
   For the second part of the search engine, the **search** function, which begins with  
   **if (url.getPath().contains("/search"))**  
-  ![QueryStringSearch](cs15lab3search.png)  
+  ![QueryStringSearch](cs15lab3query.png)  
   Similarly to the add function, we use **split** to get the information being queried  
   Here, we are searching for the sequence "bea" in the strings we have in our list.  
   With our list currently holding "beans", "beans", "showcase", and "cake", the only 2 words with "bea" would be both variants of beans  
@@ -76,4 +76,8 @@ class searchHandler implements URLHandler {
   **else if (url.getPath().equals("/clearList"))**  
   ![ClearList](cs15lab3clear.png)  
   This identifies if you type in "clearList" after the url, and serves to clear your list and give a nice little message!  
-  This only works properly if "clearList" is typed in properly or else you'll be delivered a 404 error!
+  This only works properly if "clearList" is typed in properly or else you'll be delivered a 404 error!  
+    
+    
+    
+  **Now lets talk about bugs!**

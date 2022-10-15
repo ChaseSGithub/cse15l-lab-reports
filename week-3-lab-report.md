@@ -58,10 +58,22 @@ class searchHandler implements URLHandler {
   
   Here is the first part of the search engine, the **add** function, which calls upon the part of the searchHandler class that begins with  
   **if (url.getPath().contains("/add"))**  
-  ![AddStringSearch](cs15lab3add.jpg)  
+  ![AddStringSearch](cs15lab3add.png)  
   The url.getQuery().split("=") portion of the code grants us the information after the = sign to figure out what String is to be added.  
   In this case, that would be the word **cake**  
   If you were to change cake to another word (like beans), that would be the next thing added to the list, and then displayed!  
     
   For the second part of the search engine, the **search** function, which begins with  
-  **if (url.getPath().contains("/search"))**
+  **if (url.getPath().contains("/search"))**  
+  ![QueryStringSearch](cs15lab3search.png)  
+  Similarly to the add function, we use **split** to get the information being queried  
+  Here, we are searching for the sequence "bea" in the strings we have in our list.  
+  With our list currently holding "beans", "beans", "showcase", and "cake", the only 2 words with "bea" would be both variants of beans  
+  If we were to change our search query to something like "ca", then cake would show up.  
+    
+  The final implementation is one that I added for fun! A way to clear the list without rebooting the server!  
+  This is found in the section of the code that shows  
+  **else if (url.getPath().equals("/clearList"))**  
+  ![ClearList](cs15lab3clear.png)  
+  This identifies if you type in "clearList" after the url, and serves to clear your list and give a nice little message!  
+  This only works properly if "clearList" is typed in properly or else you'll be delivered a 404 error!

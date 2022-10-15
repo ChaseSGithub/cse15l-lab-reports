@@ -58,4 +58,10 @@ class searchHandler implements URLHandler {
   
   Here is the first part of the search engine, the **add** function, which calls upon the part of the searchHandler class that begins with  
   **if (url.getPath().contains("/add"))**  
-  
+  ![AddStringSearch](cs15lab3add.jpg)  
+  The url.getQuery().split("=") portion of the code grants us the information after the = sign to figure out what String is to be added.  
+  In this case, that would be the word **cake**  
+  If you were to change cake to another word (like beans), that would be the next thing added to the list, and then displayed!  
+    
+  For the second part of the search engine, the **search** function, which begins with  
+  **if (url.getPath().contains("/search"))**

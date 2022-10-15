@@ -54,4 +54,8 @@ class searchHandler implements URLHandler {
         Server.start(port, new searchHandler());
     }
 }
-```
+```  
+  
+  Here is the first part of the search engine, the **add** function, which calls upon the part of the searchHandler class that begins with  
+  **if (url.getPath().contains("/add"))**  
+  

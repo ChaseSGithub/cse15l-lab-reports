@@ -80,4 +80,25 @@ class searchHandler implements URLHandler {
     
     
     
-  **Now lets talk about bugs!**
+  **Now lets talk about bugs!**  
+  ReverseInPlace Method:  
+  Failure Inducing Test:  
+  ![Lab2P1](lab2pic1.png)  
+  Symptom:  
+  ![Lab2P2](lab2pic2.png)  
+  Fixed Code:  
+  ![lab2P3](lab2pic3.png)  
+    
+  The issue with the initial code was that the array was referencing itself when attempting to change itself.  
+  Because of this, once it got halfway through, the original values were no longer there to be referenced.  
+    
+  Filter Method:  
+  Failure Inducing Test:  
+  ![Lab2P4](lab2pic4.png)  
+  Symptom:  
+  ![Lab2P5](lab2pic5.png)  
+  Fixed Code:  
+  ![lab2P6](lab2pic6.png)  
+    
+  The issue with this segment of code was that the resulting array of strings was ordered backwards.  
+  In order to fix this, new strings were added to the end of the array, instead of the beginning.

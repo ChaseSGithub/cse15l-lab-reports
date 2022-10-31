@@ -103,10 +103,12 @@ technical/plos/journal.pbio.0030131.txt
 technical/plos/journal.pbio.0030136.txt
 technical/plos/journal.pbio.0030137.txt
 ```
+Here is our initial run of the grep command, listing out all the files that contain "journal," in this case finding the path
 ```
 [cs15lfa22mh@ieng6-203]:docsearch:30$ grep -c  "journal" find-results.txt
 102
 ```
+-c allows us to count how many files were just listed, in this case 102 files had "journal" in the path.
 ```
 [cs15lfa22mh@ieng6-203]:docsearch:32$ grep -i  "JOURNAL" find-results.txt
 technical/plos/journal.pbio.0020001.txt
@@ -212,7 +214,39 @@ technical/plos/journal.pbio.0030131.txt
 technical/plos/journal.pbio.0030136.txt
 technical/plos/journal.pbio.0030137.txt
 ```
+-i shows us the a case insensitive version of our search, helping allow for any mistakes in capitalization and still yielding results with the word "journal" in any form.
 ```
 [cs15lfa22mh@ieng6-203]:docsearch:33$ grep -vc  "JOURNAL" find-results.txt
 1402
 ```
+-v shows us the inverse of our search, filtering out the word "JOURNAL" instead. Since, none of the words contain the case insensitive version, "JOURNAL," it shows the count of all files.
+```
+[cs15lfa22mh@ieng6-203]:docsearch:35$ grep -c ".txt" find-results.txt
+1391
+```
+Once again, -c is used here to show the count of how many txt files there are.
+```
+[cs15lfa22mh@ieng6-203]:docsearch:36$ grep -vc ".txt" find-results.txt
+11
+```
+-v is used to show how many non ".txt" files there are.
+```
+[cs15lfa22mh@ieng6-203]:docsearch:37$ grep -ivc ".Txt" find-results.txt
+11
+```
+Combining all 3 of the commands allows us to perform similarly to the last command but also accounting for errors in capitalization, in this case the first "T" being capitalized in ".txt"
+```
+[cs15lfa22mh@ieng6-203]:docsearch:40$ grep -c "plos" find-results.txt
+253
+```
+This -c lets us count how many files have the plos path.
+```
+[cs15lfa22mh@ieng6-203]:docsearch:41$ grep -vc "plos" find-results.txt
+1149
+```
+Combining -c with -v allows us to count the number of files that are in paths not containing /plos
+```
+[cs15lfa22mh@ieng6-203]:docsearch:42$ grep -ivc "pLoS" find-results.txt
+1149
+```
+Lastly, adding the -i to the command allows us to account for any case sensitivity.

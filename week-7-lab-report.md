@@ -17,6 +17,7 @@ The base segment of code starts off looking like this:
  ![pic3](cs15lab7pic3.png)  
    
  Finally, finish out the command with /g and press enter, committing all of the changes:  
- ![pic4](cs15lab7pic4.png)
- ![pic7](cs15lab7pic7.png)  
+ ![pic4](cs15lab7pic4.png)  
+  ![pic7](cs15lab7pic7.png)  
+
  

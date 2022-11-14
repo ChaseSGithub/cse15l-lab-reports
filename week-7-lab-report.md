@@ -19,5 +19,19 @@ The base segment of code starts off looking like this:
  Finally, finish out the command with /g and press enter, committing all of the changes:  
  ![pic7](cs15lab7pic7.png)  
   ![pic4](cs15lab7pic4.png)  
-
+  
+    
+    
+**Part 2**  
+For the second part of this lab, the following indiciates the amount of seconds it took me to run each set of commands:  
+**48 seconds** to run **scp**  
+**18 seconds** to run vim after already using **ssh**  
+  
+This probably just stems from my difficulty with using scp and typing it out, but I prefer to already be ssh'd in regardless.  
+It is easier in my brain to be in the remote place first than to try logging in remotely.  
+If I wanted to make a phone call from Spain, I'd rarther go to Spain and make the call (If I could travel instantaneously) than to try and remotely call from Spain, from home  
+  
+  I'm not sure if there would be any implications of the task that would affect this decision, simply because it is to my understanding that  
+  **scp** and **ssh** are extensions of each other, both helping you work with remote servers. If thats the case, one should be usable over the other  
+  and I just prefer to ssh.
  

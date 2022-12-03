@@ -1,5 +1,5 @@
 The shortest set of commands needed to replace all the variations of "start" with the word "base" is:  
-![pic4](cs15lab7pic4.png)
+![pic7](cs15lab7pic7.png)
 
 The base segment of code starts off looking like this:  
 ![pic1](cs15lab7pic1.png)  

@@ -16,7 +16,7 @@ The base segment of code starts off looking like this:
  ![pic6](cs15lab7pic6.png)  
  ![pic3](cs15lab7pic3.png)  
    
- Finally, finish out the command with /g and press <enter>, committing all of the changes:  
+ Finally, finish out the command with /g and press  ```enter```, committing all of the changes:  
  ![pic7](cs15lab7pic7.png)  
   ![pic4](cs15lab7pic4.png)  
   

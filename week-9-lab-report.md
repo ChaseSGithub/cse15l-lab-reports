@@ -1,7 +1,7 @@
 ```rm -rf student-submission
 echo "Cloning student submission..."
 git clone $1 student-submission 2> /dev/null
-echo "Done!"
+echo "Cloning completed!"
 error=0
 javac -target 1.8 -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java
 rm ListExamples.class
@@ -11,7 +11,7 @@ cd student-submission
 ls -a > fileList.txt
 if [ $(grep -c "ListExamples.java" fileList.txt) -eq 0 ]
 then
-    echo "\"ListExamples.java\" was not found!"
+    echo "\"ListExamples.java\" not found"
     exit 1
 fi
 
@@ -20,11 +20,11 @@ javac -cp $CP *.java
 
 if [ $? -ne 0 ]
 then
-    echo "Compiler error!"
+    echo "Compile error, Score: 0/2"
     exit 1
 fi
 
-echo "Done!"
+echo "Finished!"
 echo "Running tests..."
 cp ListExamples.class ..
 java -cp $CP org.junit.runner.JUnitCore TestListExamples > error.txt

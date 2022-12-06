@@ -11,20 +11,21 @@ cd student-submission
 ls -a > fileList.txt
 if [ $(grep -c "ListExamples.java" fileList.txt) -eq 0 ]
 then
-    echo "\"ListExamples.java\" not found"
+    echo "\"ListExamples.java\" not found, check to see that you've submitted the proper files"
     exit 1
 fi
 
-echo "Compiling..."
+echo "Attempting to compile..."
 javac -cp $CP *.java
 
 if [ $? -ne 0 ]
 then
-    echo "Compile error, Score: 0/2"
+    echo "COMPILE ERROR, Score: 0.00/2.00"
+    echo "Make sure that your program compiles properly"
     exit 1
 fi
 
-echo "Finished!"
+echo "COMPILE SUCCESS"
 echo "Running tests..."
 cp ListExamples.class ..
 java -cp $CP org.junit.runner.JUnitCore TestListExamples > error.txt
@@ -32,34 +33,34 @@ cp ../ListExamples.class .
 if [ $(grep -c "testFilter" error.txt) -ne 0 ]
 then
     let "error+=1"
-    echo "[FAILED 0/1] testFilter"
+    echo "[01 FAILED 0.00/1.00] testFilterFunctionality"
 else
-    echo "[PASSED 1/1] testFilter"
+    echo "[01 PASSED 1.00/1.00] testFilterFunctionality"
 fi
 
 if [ $(grep -c "testMerge" error.txt) -ne 0 ]
 then
     let "error+=1"
-    echo "[FAILED 0/1] testMerge"
+    echo "[02 FAILED 0.00/1.00] testMergeFunctionality"
 else
-    echo "[PASSED 1/1] testMerge"
+    echo "[02 PASSED 1.00/1.00] testMergeFunctionality"
 fi
 
 if [ $error -eq 2 ]
 then
-    echo "Score: 0/2"
+    echo "Score: 0.00/2.00"
     echo "See error.txt file in student-submission for details"
 fi
 
 if [ $error -eq 1 ]
 then
-    echo "Score: 1/2"
+    echo "Score: 1.00/2.00"
     echo "See error.txt file in student-submission for details"
 fi
 
 if [ $error -eq 0 ]
 then
-    echo "Score: 2/2"
+    echo "Score: 2.00/2.00"
     echo "All tests passed!"
 fi
 ```

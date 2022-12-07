@@ -91,5 +91,15 @@ ls -a > fileList.txt
 if [ $(grep -c "ListExamples.java" fileList.txt) -eq 0 ]  <--- Condition is false since file "ListExamples.java" was found| Return code:0
 then  
     echo "\"ListExamples.java\" not found, check to see that you've submitted the proper files"  <--- Not run since if is false  
-    exit 1  <--- Not run since if is false
+    exit 1  <--- Not run since if is false  
 fi  
+
+echo "ATTEMPTING TO COMPILE..."  <--- Output: "ATTEMPTING TO COMPILE..." Return code: 0
+javac -cp $CP *.java <--- Compiles files ending with .java, fails to compile and prints error Return code: 1  
+if [ $? -ne 0 ] <-- Return code is currently 1 so does not equal 0 therefore this evaluates to true since 1 != 0   
+then <-- Runs since if was true  
+    echo "COMPILE ERROR, Score: 0.00/2.00" <--- Output: "COMPILE ERROR, Score: 0.00/2.00"  
+    echo "Make sure that your program compiles properly" <--- Output: "Make sure that your program compiles properly"  
+    exit 1 <-- Script exits with exit code 1  
+fi  
+Since our script exited with this if statement, the code that comes after will not run.

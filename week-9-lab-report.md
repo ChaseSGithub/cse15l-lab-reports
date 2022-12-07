@@ -83,8 +83,7 @@ git clone $1 student-submission 2> /dev/null
 echo "Cloning completed!"  
 error=0  
 javac -target 1.8 -cp ".;..lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java  
-rm ListExamples.class  
-  
+rm ListExamples.class   
   CP="..;../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"  
 cd student-submission
 

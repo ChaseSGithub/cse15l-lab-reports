@@ -85,8 +85,6 @@ error=0
 javac -target 1.8 -cp ".;..lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java  
 rm ListExamples.class  
   
-  
-CP="..;../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"  
-
+  CP="..;../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"  
 cd student-submission
 

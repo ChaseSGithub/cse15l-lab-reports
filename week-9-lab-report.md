@@ -88,8 +88,8 @@ rm ListExamples.class
 cd student-submission
   
 ls -a > fileList.txt  
-if [ $(grep -c "ListExamples.java" fileList.txt) -eq 0 ]  
+if [ $(grep -c "ListExamples.java" fileList.txt) -eq 0 ]  <--- Condition is false since file "ListExamples.java" was found| Return code:0
 then  
-    echo "\"ListExamples.java\" not found, check to see that you've submitted the proper files"  
-    exit 1  
+    echo "\"ListExamples.java\" not found, check to see that you've submitted the proper files"  <--- Not run since if is false
+    exit 1  <--- Not run since if is false
 fi  

@@ -1,11 +1,15 @@
-```rm -rf student-submission
+```# Create your grading script here
+
+
+
+rm -rf student-submission
 echo "Cloning student submission..."
 git clone $1 student-submission 2> /dev/null
 echo "Cloning completed!"
 error=0
-javac -target 1.8 -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java
+javac -target 1.8 -cp ".;..lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java
 rm ListExamples.class
-CP="..:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"
+CP="..;../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"
 cd student-submission
 
 ls -a > fileList.txt
@@ -15,7 +19,7 @@ then
     exit 1
 fi
 
-echo "Attempting to compile..."
+echo "ATTEMPTING TO COMPILE..."
 javac -cp $CP *.java
 
 if [ $? -ne 0 ]
@@ -48,19 +52,20 @@ fi
 
 if [ $error -eq 2 ]
 then
-    echo "Score: 0.00/2.00"
+    echo "FINAL SCORE: 0.00/2.00"
     echo "See error.txt file in student-submission for details"
 fi
 
 if [ $error -eq 1 ]
 then
-    echo "Score: 1.00/2.00"
+    echo "FINAL SCORE: 1.00/2.00"
     echo "See error.txt file in student-submission for details"
 fi
 
 if [ $error -eq 0 ]
 then
-    echo "Score: 2.00/2.00"
+    echo "FINAL SCORE: 2.00/2.00"
     echo "All tests passed!"
 fi
+
 ```

@@ -79,11 +79,17 @@ For our trace, we will be examining the second screenshot, analyzing the case of
 Following our code:  
 -rm -rf student-submission <--- Attempts to remove any current student-submission. Return code: 0
 echo "Cloning into student submission" <--- Output: "Cloning into student submission" Error: "" Return code:0  
-git clone $1 student-submission 2> /dev/null  
-echo "Cloning completed!"  
+git clone $1 student-submission 2> /dev/null <--- Return code: 0
+echo "Cloning completed!"  <--- Output: "Cloning completed" Return code: 0
 error=0  
-javac -target 1.8 -cp ".;..lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java  
+javac -target 1.8 -cp ".;..lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" ListExamples.java TestListExamples.java <--- Return code:0 
 rm ListExamples.class   
   CP="..;../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar"  
 cd student-submission
-
+  
+ls -a > fileList.txt  
+if [ $(grep -c "ListExamples.java" fileList.txt) -eq 0 ]  
+then  
+    echo "\"ListExamples.java\" not found, check to see that you've submitted the proper files"  
+    exit 1  
+fi  

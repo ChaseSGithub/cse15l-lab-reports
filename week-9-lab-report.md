@@ -73,4 +73,10 @@ fi
   
 ![lab9pic1](lab9pic1.png)  
   
-![lab9pic3](lab9pic3.png)
+![lab9pic3](lab9pic3.png)  
+  
+For our trace, we will be examining the second screenshot, analyzing the case of a **COMPILE ERROR**  
+Following our code:  
+-rm -rf student-submission <--- Attempts to remove any current student-submission. Return code: 0
+echo "Cloning into student submission" <--- Output: "Cloning into student submission" Error: "" Return code:0
+git clone $1 student-submission 2> /dev/null

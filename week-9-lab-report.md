@@ -94,7 +94,7 @@ then
     exit 1  <--- Not run since if is false  
 fi  
 
-echo "ATTEMPTING TO COMPILE..."  <--- Output: "ATTEMPTING TO COMPILE..." Return code: 0
+echo "ATTEMPTING TO COMPILE..."  <--- Output: "ATTEMPTING TO COMPILE..." Return code: 0  
 javac -cp $CP *.java <--- Compiles files ending with .java, fails to compile and prints error Return code: 1  
 if [ $? -ne 0 ] <-- Return code is currently 1 so does not equal 0 therefore this evaluates to true since 1 != 0   
 then <-- Runs since if was true  

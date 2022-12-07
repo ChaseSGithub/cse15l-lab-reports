@@ -69,3 +69,8 @@ then
 fi
 
 ```
+![lab9pic2](lab9pic2.png)  
+  
+![lab9pic1](lab9pic1.png)  
+  
+![lab9pic3](lab9pic3.png)

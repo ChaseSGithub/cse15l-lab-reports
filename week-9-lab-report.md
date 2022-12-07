@@ -1,7 +1,5 @@
 ```
 
-
-
 rm -rf student-submission
 echo "Cloning student submission..."
 git clone $1 student-submission 2> /dev/null
@@ -68,7 +66,8 @@ then
     echo "All tests passed!"
 fi
 
-```   
+```  
+
 
 ![lab9pic2](lab9pic2.png)  
   
